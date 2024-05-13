@@ -1,0 +1,6 @@
+2nd crud task 
+first name and last name  fill validation 
+Delete  confirm prompt 
+need to understand client validation and server level validation
+ 
+

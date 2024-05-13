@@ -7,13 +7,12 @@
     <title>Document</title>
     <style>
         body {
-           display: grid;
-           place-items: center;
-           height: 100vh;
-           margin: 0;
-           font-family: sans-serif;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
         }
-
     </style>
 </head>
 
@@ -22,9 +21,9 @@
     // Define a variable $book_name and assign the value "The Alchemist" to it.
     $book_name = "The Alchemist";
 
-     // Define a variable $read and assign the value true to it.
-    $read = true;
-
+    // Define a variable $read and assign the value true to it.
+    //  $read = true;
+    $read = false;
     // Check if the $read variable is true.
     if ($read) {
         // If $read is true, create a message indicating that the book has been read.
@@ -35,9 +34,10 @@
     }
     ?>
     <h1>
-        <?php
-          echo $message;
-        ?>
+
+        <?php echo $message; ?>
+        <!-- alternative way to print -->
+        <?= $message; ?>
     </h1>
 
 </body>

@@ -34,10 +34,10 @@
     }
     ?>
     <h1>
-
-        <?php echo $message; ?>
-        <!-- alternative way to print -->
-        <?= $message; ?>
+        
+         <?php echo $message; ?>  
+         
+        <?= $message; ?> <!-- alternative way to print -->
     </h1>
 
 </body>

@@ -88,7 +88,7 @@
         ],
         [
             "name" => "The Picture of Dorian Gray",
-            "author" => "Pausadlo Coelho",
+            "author" => "sadfsaf Coelho",
             "price" => 10.99,
             "year" => 1988,
             "genre" => "Fiction",
@@ -96,37 +96,35 @@
             "purchaseUrl" => "https://www.amazon.com/Alchemist-Paulo-Coelho/dp/0061120086"
         ],
     ];
+    function filterByAuthor($books, $author)
+    {
+        $filterBooks = [];
+
+        foreach ($books as $book) {
+
+            if ($book['author'] === $author) {
+                $filterBooks[] = $book;
+            }            
+        }
+
+        return $filterBooks;
+    }
+
     ?>
 
     <ul>
-       
-        <?php  
-        //This will give us the array of the key we used in the array
-        foreach ($books as $book) : ?>
+    <!-- //This will give us the array of the key we used in the array -->
+        <?php  foreach (filterByAuthor($books, "sadfsaf Coelho") as $book) : ?>
+        
             <li>
                 <!-- this will help to open the link of the book  -->
              <a href="<?= $book['purchaseUrl']; ?>"> 
-                <?= $book['name']; ?>(<?= $book['author']; ?>)
+                <?= $book['name']; ?>(<?= $book['author']; ?>) - By <?= $book['author']; ?>
                 </a>
             </li>
-        <?php
-        endforeach;
-        ?>
-
-
-
-
-
+            
+            <?php endforeach; ?>
 
     </ul>
-
-
-    <!-- <p>
-         This is another way to print the single associated array 
-        <?= $books[0]; ?>
-    </p> -->
-
-
 </body>
-
 </html>
